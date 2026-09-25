@@ -1,0 +1,22 @@
+{
+  "name": "bark-worker-server",
+  "compatibility_date": "2025-10-08",
+  "build": {
+    "command": "npm run build:cf"
+  },
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "./dist/handler.js",
+  "observability": {
+    "enabled": true
+  },
+  "kv_namespaces": [
+    {
+      "binding": "BARK_KV",
+      "id": "6120f5119a3e420c8600dc4997e4c5cc"
+    }
+  ],
+  "vars": {
+    "ALLOW_NEW_DEVICE": "true",
+    "ALLOW_QUERY_NUMS": "true"
+  }
+}
